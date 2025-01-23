@@ -1,0 +1,83 @@
+{% extends "rest_framework/base.html" %}
+
+{% block style %}
+    {{ block.super }}
+    <style>
+        :root {
+            --primary-color: #E3F2FD;
+            --secondary-color: #90A4AE;
+            --background-color: #F5F5F5;
+            --text-color: #37474F;
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-color) !important;
+            border-color: #BBDEFB !important;
+        }
+
+        .navbar-brand {
+            color: #1976D2 !important;
+        }
+
+        .breadcrumb {
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .wrapper {
+            padding: 20px;
+        }
+
+        .well {
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background-color: #1976D2 !important;
+            border-color: #1565C0 !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #1565C0 !important;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border-color: #E0E0E0;
+        }
+
+        .form-control:focus {
+            border-color: #1976D2;
+            box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
+        }
+
+        .tab-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        pre {
+            background-color: #F8F9FA;
+            border-radius: 5px;
+            padding: 15px;
+        }
+    </style>
+{% endblock %}
+
+{% block branding %}
+    <a class="navbar-brand" rel="nofollow" href="/">
+        News API
+    </a>
+{% endblock %}
